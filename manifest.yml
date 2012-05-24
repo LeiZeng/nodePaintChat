@@ -1,0 +1,13 @@
+---
+applications:
+  .:
+    url: paintchat.cloudfoundry.com
+    framework:
+      name: node
+      runtime: node
+      info:
+        mem: 256M
+        description:  Node.JS Application
+        exec: node server.js
+    mem: 256M
+    instances: 1

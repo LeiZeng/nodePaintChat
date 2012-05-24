@@ -1,10 +1,10 @@
 {
-  "name": "nodePaintChat",
-  "version": "0.1.0",
+  "name": "PaintChat",
+  "version": "0.1.1",
   "description": "a collabpaint app for node",
-  "repository": "git@github.com:hpf1908/nodePaintChat.git",
+  "repository": "git://github.com/LeiZeng/nodePaintChat.git",
   "author": "hpf1908<hpf1908@gmail.com> (http://nrblog.cnodejs.net)",
-  "main": "server",
+  "main": "./server.js",
   "contributors": [ 
     { "name": "hpf1908", "email": "hpf1908@gmail.com" }
   ],
@@ -13,6 +13,5 @@
     "ejs": ">= 0.1.0"
   },
   "keywords": ["collabpaint", "node", "app"],
-  "repository": "git@github.com:hpf1908/nodePaintChat.git",
   "engines": { "node": ">= 0.4.1" }
 }

@@ -3,13 +3,16 @@
  * @author hpf1908@gmail.com
  * @date 2011.05.07
  */
-var express = require('express'),
-    form = require('connect-form'),
-    config = require('./config');
-var app = express.createServer(form({ keepExtensions: true , uploadDir : 'public/files'}));
-var port = config.startParams.port;
+var port = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
+var express = require('express');
+var fs=require('fs');
+var path = require('path');
+var url = require('url');
+//var config = require('./config');
+var app = module.exports = express.createServer();//form({ keepExtensions: true , uploadDir : 'public/files'}));
+//var port = require('./config').startParams.port;
 
 require('./boot').boot(app);
 app.listen(port);
 
-console.log('app started on port '+port);
+console.log('app started on port ' + app.address().port);
