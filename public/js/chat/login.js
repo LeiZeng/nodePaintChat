@@ -6,11 +6,13 @@ $(function(){
 		Module=Painter.Gui.Module;
  	
     var client = new Module({
+			id: 'client',
     	container:'#painter',
         title: "聊天室",
         x: 300,
         y: 200,
         width:300,
+				canmove:false,
         contents: 
         ['<div class="login">\
            <div class="logform tw_new_login">\
@@ -93,8 +95,9 @@ $(function(){
        		  
        		   //bug
        		   self.M.hide();
-       		   self.appendScript("js/painter/init.js",function(){
-       		   	 self.appendScript("js/chat/client.js");
+       		   self.appendScript("js/painter/init2.js",function(){
+       		   	 self.appendScript("js/chat/client2.js");
+       		   	 self.appendScript("js/chat/gamepanel.js");
        		   });   
             }
             
