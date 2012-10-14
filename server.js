@@ -10,7 +10,7 @@ var path = require('path');
 var url = require('url');
 var config = require('./config');
 var app = module.exports = express.createServer();//form({ keepExtensions: true , uploadDir : 'public/files'}));
-var port = config.port;
+var port = config.startParams.port;
 
 require('./boot').boot(app);
 app.listen(port);
